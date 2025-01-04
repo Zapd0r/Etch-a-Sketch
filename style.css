@@ -1,0 +1,7 @@
+#container {
+  display: grid;
+  width: 600px;
+  height: 600px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+}
