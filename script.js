@@ -1,4 +1,7 @@
-const container = document.getElementById("container")
+const container = document.getElementById("grid-container")
+const colorpicker = [... document.querySelectorAll(".colorpicker")]
+
+
 let gridSize = 32
 var pointerDown = false
 var currentColor = "#1a1a1a"
@@ -10,14 +13,26 @@ document.addEventListener("mouseup", () => {
   pointerDown = false
 })
 
+colorpicker.forEach(picker => {
+  picker.style.backgroundColor = picker.dataset.color
+  picker.addEventListener("click", ()=> {
+    currentColor = picker.dataset.color
+  })
+  
+});
+
 function createGrid(gridSize) {
   for (let i = 0; i < gridSize*gridSize; i++) { 
     let squares = document.createElement("div")
     squares.classList.add("squares")
-    squares.addEventListener("mouseover", (element) => {
+    squares.attributes.d
+    squares.addEventListener("mouseover", (event) => {
       if (pointerDown) {
-        element.target.style.backgroundColor = currentColor
+        event.target.style.backgroundColor = currentColor
       } 
+    })
+    squares.addEventListener("dragstart", (event) => {
+      event.preventDefault()
     })
     // squares.addEventListener("mouseleave", (element) => {
     //   setTimeout(() => {
@@ -49,4 +64,8 @@ function reset() {
   container.childNodes.forEach(element => {
     element.style.backgroundColor = "transparent"
   });
+}
+
+function setColor(color) {
+  
 }

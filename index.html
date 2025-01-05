@@ -9,13 +9,26 @@
 </head>
 
 <body>
-  <div id="header">
-    <button onclick="resizeGrid()">Resize</button>
-    <h1>Etch-A-Sketch</h1>
-    <button onclick="reset()">Reset</button>
-  </div>
   <div id="wrapper">
-    <div id="container"></div>
+    <div id="container">
+      <div class="row">
+        <button class="menubuttons" onclick="resizeGrid()">Resize</button>
+        <h1>Etch-A-Sketch</h1>
+        <button class="menubuttons" onclick="reset()">Reset</button>
+      </div>
+      <div id="grid-container"></div>
+      <div class="row">
+        <img src="knob.svg" alt="knob" id="knobX">
+        <div id="colorswatch">
+          <button class="colorpicker" data-color="red"></button>
+          <button class="colorpicker" data-color="blue"></button>
+          <button class="colorpicker" data-color="green"></button>
+          <button class="colorpicker" data-color="orange"></button>
+          <button class="colorpicker" data-color="#1a1a1a"></button>
+        </div>
+        <img src="knob.svg" alt="knob" id="knobY">
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
