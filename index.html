@@ -12,21 +12,24 @@
   <div id="wrapper">
     <div id="container">
       <div class="row">
-        <button class="menubuttons" onclick="resizeGrid()">Resize</button>
+        <button class="menuButtons dropshadow" onclick="resizeGrid()">Resize</button>
         <h1>Etch-A-Sketch</h1>
-        <button class="menubuttons" onclick="reset()">Reset</button>
+        <button class="menuButtons dropshadow" onclick="reset()">Reset</button>
       </div>
-      <div id="grid-container"></div>
+
+
+        <div id="gridContainer"></div>
+
       <div class="row">
-        <img src="knob.svg" alt="knob" id="knobX">
-        <div id="colorswatch">
+        <div class="knobContainer"><img src="knob.svg" alt="knob" id="knobX"></div>
+        <div id="colorswatch" class="dropshadow">
+          <button class="colorpicker active" data-color="#1a1a1a"></button>
           <button class="colorpicker" data-color="red"></button>
           <button class="colorpicker" data-color="blue"></button>
           <button class="colorpicker" data-color="green"></button>
           <button class="colorpicker" data-color="orange"></button>
-          <button class="colorpicker" data-color="#1a1a1a"></button>
         </div>
-        <img src="knob.svg" alt="knob" id="knobY">
+        <div class="knobContainer"><img src="knob.svg" alt="knob" id="knobY"></div>
       </div>
     </div>
   </div>
